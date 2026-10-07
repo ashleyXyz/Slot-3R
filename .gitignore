@@ -1,0 +1,10 @@
+tmp/
+*.log
+*.pid
+# Local files from the first layout; not used by the current page.
+/styles.css
+/README.txt
+/assets/hero-point3r.webp
+/assets/hero-slot3r.webp
+/assets/indoor.webp
+/assets/outdoor.webp

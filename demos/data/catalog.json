@@ -1,0 +1,122 @@
+[
+  {
+    "scene": "courtyard_34502981",
+    "kind": "stream",
+    "featured": true
+  },
+  {
+    "scene": "arcade_37340388_t6",
+    "kind": "stream",
+    "featured": true
+  },
+  {
+    "scene": "backyard_7578555",
+    "kind": "stream",
+    "featured": true
+  },
+  {
+    "scene": "home_7578547",
+    "kind": "stream",
+    "featured": true
+  },
+  {
+    "scene": "alley_11339296",
+    "kind": "stream",
+    "featured": true
+  },
+  {
+    "scene": "church_37959555_t8",
+    "kind": "stream",
+    "featured": true
+  },
+  {
+    "scene": "garden",
+    "kind": "static",
+    "featured": true
+  },
+  {
+    "scene": "inside1",
+    "kind": "static",
+    "featured": true
+  },
+  {
+    "scene": "hotel_10971386_t2",
+    "kind": "stream",
+    "featured": false
+  },
+  {
+    "scene": "apartment_34593442",
+    "kind": "stream",
+    "featured": false
+  },
+  {
+    "scene": "apartment_35308496",
+    "kind": "stream",
+    "featured": false
+  },
+  {
+    "scene": "home_8580864",
+    "kind": "stream",
+    "featured": false
+  },
+  {
+    "scene": "home_7578540",
+    "kind": "stream",
+    "featured": false
+  },
+  {
+    "scene": "living_36539208",
+    "kind": "stream",
+    "featured": false
+  },
+  {
+    "scene": "living_4231455",
+    "kind": "stream",
+    "featured": false
+  },
+  {
+    "scene": "living_10135156",
+    "kind": "stream",
+    "featured": false
+  },
+  {
+    "scene": "living_18531410",
+    "kind": "stream",
+    "featured": false
+  },
+  {
+    "scene": "backyard_7578543",
+    "kind": "stream",
+    "featured": false
+  },
+  {
+    "scene": "inside2",
+    "kind": "static",
+    "featured": false
+  },
+  {
+    "scene": "morning_apartment",
+    "kind": "static",
+    "featured": false
+  },
+  {
+    "scene": "green_room",
+    "kind": "static",
+    "featured": false
+  },
+  {
+    "scene": "complete_kitchen",
+    "kind": "static",
+    "featured": false
+  },
+  {
+    "scene": "kitchen",
+    "kind": "static",
+    "featured": false
+  },
+  {
+    "scene": "grey_white_room",
+    "kind": "static",
+    "featured": false
+  }
+]

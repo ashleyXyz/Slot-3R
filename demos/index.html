@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Slot3R reconstructions in interactive 3D, with synchronized RGB observations and camera trajectories.">
+  <title>Slot3R · Interactive Demo</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css?v=9">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
+  <script>if(new URLSearchParams(location.search).has('embed'))document.documentElement.classList.add('embedded');</script>
+</head>
+<body>
+  <header class="page-header"><a class="brand" href="../">Slot3R <span>Interactive Demo</span></a><a href="../">Project page <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 15 10-10 M5 5h10v10"/></svg></a></header>
+  <main>
+    <section class="workspace" aria-label="Interactive 3D reconstruction">
+      <div class="workspace-head"><h1>Explore the reconstruction</h1><a id="source" target="_blank" rel="noopener noreferrer" hidden>RGB source <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 15 10-10 M5 5h10v10"/></svg></a></div>
+      <div id="panels" class="panels">
+        <div id="viewer" class="cloud-panel">
+          <div class="panel-label"><span>3D reconstruction</span><span id="cloud-mode">Full result</span></div>
+          <div id="canvas-host" aria-label="3D point cloud: drag to rotate, scroll to zoom, right-drag to pan"></div>
+          <div class="view-buttons">
+            <button id="rotate" aria-pressed="false" disabled>Orbit</button>
+            <button id="fit" disabled>Reset view</button>
+            <button id="top" disabled>Top view</button>
+            <button id="fullscreen" aria-label="Toggle fullscreen" disabled>Fullscreen</button>
+          </div>
+          <div class="viewer-caption"><span>Drag to rotate · scroll to zoom · right-drag to pan</span><span id="camera-legend" hidden><i></i>Camera path</span></div>
+          <div id="loading" role="status"><span id="loading-text">Loading reconstruction…</span><button id="retry" hidden>Retry</button></div>
+        </div>
+        <div id="rgb-panel" class="rgb-panel" hidden>
+          <div class="rgb-heading">RGB input</div>
+          <img id="rgb-image" width="384" height="216" alt="RGB observation at the selected reconstruction frame">
+          <div class="sequence-heading">Image sequence</div>
+          <div id="rgb-sequence"><img alt="Previous RGB observation"><img alt="Previous RGB observation"><img alt="Current RGB observation"></div>
+        </div>
+      </div>
+      <div id="playback" class="playback" hidden>
+        <button id="play" class="primary-button" disabled>Replay</button>
+        <button id="restart" aria-label="Restart reconstruction" title="Restart" disabled><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 7a7 7 0 1 1-1 5 M4 2v5h5"/></svg></button>
+        <span id="clock">00:00 / 00:00</span>
+        <input id="seek" type="range" min="0" max="1" step="0.01" value="0" aria-label="Reconstruction progress" disabled>
+        <select id="speed" aria-label="Reconstruction replay speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select>
+      </div>
+      <div class="options">
+        <div id="mode-switch" class="mode-switch" role="group" aria-label="Reconstruction display" hidden><button id="complete" class="selected" aria-pressed="true">Full result</button><button id="progressive" aria-pressed="false">Frame by frame</button></div>
+        <label id="trajectory-option" hidden><input id="trajectory" type="checkbox" checked>Camera path</label>
+        <label class="point-size">Point size<input id="size" type="range" min="1" max="5" step="0.25" value="2" aria-label="Point size"></label>
+        <span id="stats" role="status">—</span>
+      </div>
+    </section>
+    <section class="scene-section" aria-label="Scene selection">
+      <div class="section-heading"><h2>Choose a scene</h2><span>Drag and zoom to explore</span></div>
+      <div id="featured" class="gallery" role="group" aria-label="Featured reconstruction scenes"></div>
+      <details class="more-scenes"><summary><em class="more-scenes-label">More scenes</em> <span aria-hidden="true">+</span></summary><div id="gallery" class="gallery" role="group" aria-label="More reconstruction scenes"></div></details>
+    </section>
+    <footer>RGB inputs from <a href="https://www.pexels.com/license/" target="_blank" rel="noopener noreferrer">Pexels</a>. Original sources are linked for each RGB sequence.</footer>
+  </main>
+  <script type="module" src="./app.js?v=16"></script>
+</body>
+</html>
